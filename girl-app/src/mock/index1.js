@@ -4,7 +4,7 @@ function getBannerFn () {
   let arr =[];
   for(let i = 0;i < 10;i++) {
     arr.push({
-      id:'banner' + i,
+      id: 'banner' + i,
       imgSrc:Mock.Random.image('375x180',Mock.mock('@color()')),
       alt: '',
       href: ''

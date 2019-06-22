@@ -27,6 +27,7 @@ class Com extends Component {
     // )
     let ta = <div>还没有数据</div>
     this.state.activeIndex === 0 ? ta = <Shoplist list = { this.props.bannerlist } { ...this.props } /> : ta = <div></div>;
+    // this.state.activeIndex === 1 ? ta = <Shoplist list = { this.props.bannerlist } { ...this.props } /> : ta = <div></div>;
     return ta
   }
   

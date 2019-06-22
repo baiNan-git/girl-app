@@ -11,6 +11,7 @@ class Com extends React.Component {
     console.log(this.props)
   }
   render() {
+    
     return (
       <div>
         <Carousel
@@ -18,9 +19,9 @@ class Com extends React.Component {
           infinite
           style={{ display: 'block', width: '100%', height: 176 }}
         >
-          {this.props.bannerlist.map((item, index) => (
+          {this.props.bannerlist.map((item, index) => ( 
             <a
-              key={item.id}
+              key={index}
               href="http://www.alipay.com"
               style={{ display: 'block', width: '100%', height: '100%' }}
             >
