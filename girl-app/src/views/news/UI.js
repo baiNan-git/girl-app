@@ -72,7 +72,7 @@ class Com extends Component {
         open={this.state.open}
         onOpenChange={this.onOpenChange}
       >
-        <div className='box'>
+        <div className='box-left'>
         <NavBar className="iconfont icon-caidan" onLeftClick={this.onOpenChange}>消息</NavBar>
           <p>收藏的赞和收藏</p>
           <p>收到的评论和@</p>
