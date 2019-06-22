@@ -5,7 +5,7 @@ import DetailApp from '@/layout/DetailApp';
 import store from '@/store';
 import { Provider } from 'react-redux';
 import { HashRouter, Switch, Route} from 'react-router-dom';
-import '@/main.scss';
+import '@/news-main.scss';
 
 ReactDOM.render(
   <Provider store = { store }>
