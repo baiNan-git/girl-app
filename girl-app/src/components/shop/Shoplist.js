@@ -10,6 +10,10 @@ class Com extends React.Component {
     super(props)
     console.log(this.props)
   }
+  goDetail () {
+    console.log(this.props)
+    this.props.history.push('/detail')
+  }
   render() {
     
     return (
@@ -36,40 +40,24 @@ class Com extends React.Component {
         <Hot1 />
         <Hot2 />
         <Hot3 />
-        <div className = 'shop-prolist'>
-          <ul>
-            <li>
-              <div className = 'img'>
-                <img src='' alt='' />
-              </div>
-              <div className = 'title'>
-                <h4>滋润丰盈肌肤神器</h4>
-                <p>兰蔻精华修复肌底液</p>
-                <span>￥200</span>
-              </div>
-            </li>
-            <li>
-              <div className = 'img'>
-                <img src='' alt='' />
-              </div>
-              <div className = 'title'>
-                <h4>滋润丰盈肌肤神器</h4>
-                <p>兰蔻精华修复肌底液</p>
-                <span>￥200</span>
-              </div>
-            </li>
-            <li>
-              <div className = 'img'>
-                <img src='' alt='' />
-              </div>
-              <div className = 'title'>
-                <h4>滋润丰盈肌肤神器</h4>
-                <p>兰蔻精华修复肌底液</p>
-                <span>￥200</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul className = 'shop-prolist'>
+          {
+            this.props.shoplist.map((item, index) => {
+              return (
+                <li key = {index} onClick = { this.goDetail.bind(this) }>
+                  <div className = 'img'>
+                    <img src={ item.imgSrc } alt='' />
+                  </div>
+                  <div className = 'title'>
+                    <h4>{ item.title }</h4>
+                    <p>{ item.name }</p>
+                    <span>￥{ item.price }</span>
+                  </div>
+                </li>
+              )
+            })
+          }
+        </ul>
       </div>
 
     )

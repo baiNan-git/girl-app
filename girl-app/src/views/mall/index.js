@@ -13,9 +13,18 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getbannerlist() {
       api.requestGetData('/getbanner').then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         dispatch({
           type: 'changeBannerlist',
+          data: res.data
+        })
+      })
+    },
+    getShoplist() {
+      api.requestGetData('/getShoplist').then(res => {
+        // console.log(res.data)
+        dispatch({
+          type: 'changeShoplist',
           data: res.data
         })
       })

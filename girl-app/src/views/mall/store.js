@@ -6,6 +6,8 @@ const reducer = (state = {
   switch (type) {
     case 'changeBannerlist':
       return Object.assign({}, state, {bannerlist: data});
+    case 'changeShoplist':
+      return Object.assign({}, state, {shoplist: data});
     default:
       return state;
   }

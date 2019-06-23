@@ -18,6 +18,7 @@ class Com extends Component {
   componentDidMount () {
     // console.log(this.props.getbannerlist())
     this.props.getbannerlist()
+    this.props.getShoplist()
   }
   renderContent () {
     // return (
@@ -26,7 +27,7 @@ class Com extends Component {
     // </div>
     // )
     let ta = <div>还没有数据</div>
-    this.state.activeIndex === 0 ? ta = <Shoplist list = { this.props.bannerlist } { ...this.props } /> : ta = <div></div>;
+    this.state.activeIndex === 0 ? ta = <Shoplist bannerlist = { this.props.bannerlist } { ...this.props } shoplist = { this.props.shoplist } /> : ta = <div></div>;
     // this.state.activeIndex === 1 ? ta = <Shoplist list = { this.props.bannerlist } { ...this.props } /> : ta = <div></div>;
     return ta
   }
