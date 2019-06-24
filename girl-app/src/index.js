@@ -8,6 +8,7 @@ import { HashRouter, Switch, Route} from 'react-router-dom';
 import '@/main.scss';
 import '@/mock/index1.js';
 import '@/news-main.scss';
+import '@/home.scss';
 
 ReactDOM.render(
   <Provider store = { store }>

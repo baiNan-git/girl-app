@@ -1,0 +1,128 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container {
+  @include rect(100%,100%);
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flexbox();
+    @include flex();
+    @include rect(100%,auto);
+    @include flex-direction(column);
+    .header {
+      @include rect(100%,0.44rem);
+      @include flexbox();
+      background-color: (#ec6b9b);
+      .img_src {
+       @include rect(0.35rem, 0.35rem);
+       @include border-radius(50%);
+       margin: 0.05rem 0.59rem 0 0.11rem;
+      }
+    }
+  }
+    .content {
+      background-color: #f5f7f9;
+      @include flex();  
+      @include rect(100%,auto);
+      overflow: auto;
+      .home-search {
+        @include flexbox();
+        @include rect(100%,0.4rem);
+        background-color: #fff;
+        // position: fixed;
+        justify-content: center;
+        .search {
+          @include rect(80%,0.23rem);
+          @include align-items();
+          @include flexbox();
+          background: #f1f1f1;
+          border-radius: 0.38rem;
+          margin-top: 0.05rem;
+          span {
+            color: #999999;
+            width: 0.3rem;
+            height: 0.3rem;
+            margin: 0.06rem 0.1rem 0 0.11rem;
+          }
+          p {
+            font-size: 0.12rem;
+            color: #999;
+          }
+        }
+      }
+    .tj {
+      
+    .tj_prolist {
+      margin-top: 0.5rem;
+      @include flexbox();
+      margin: 0 auto;
+      @include flex-direction(column);
+      @include rect(96%, 2.7rem);
+      @include border-radius(0.1rem);
+      background-color: #FFFFFF;
+      .img_src {
+
+      }
+      p {
+        font-size: 0.14rem;
+        color: #333333;
+        margin: 0.14rem;
+      }
+      .prolist_b {
+        overflow: hidden;
+        .prolist_l {
+          img {
+            @include rect(0.3rem, 0.3rem);
+          }
+          span {
+            font-size: 0.02rem;
+            color: #999999;
+            margin-left: 0.05rem;
+          }
+          float: left;
+        }
+        .prolist_r {
+          float: right;
+          span {
+           padding: 0.06rem;
+           text-align: center;
+          }
+          a {
+            text-align: center;
+          }
+        }
+      }
+    } 
+  }
+    }
+ 
+  .footer {
+    @include rect(100%,0.5rem);
+    background: #FFFFFF;
+    ul {
+      @include rect(100%,100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include flexbox();
+        @include rect(auto,100%);
+        @include flex-direction(column);
+        @include justify-content();
+        @include align-items();
+        color: #999999;
+        span {
+          font-size: 0.15rem;
+        }
+        p {
+          font-size: 0.15rem;
+        }
+        &.active {
+          font-size: 0.17rem;
+          color: #333333;
+        }
+      }
+    }
+  }
+}
