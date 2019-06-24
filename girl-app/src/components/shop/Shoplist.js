@@ -23,19 +23,19 @@ class Com extends React.Component {
           infinite
           style={{ display: 'block', width: '100%', height: 176 }}
         >
-          {this.props.bannerlist.map((item, index) => ( 
+          {/* {this.props.bannerlist.map((item, index) => (  */}
             <a
-              key={index}
+              // key={index}
               href="http://www.alipay.com"
               style={{ display: 'block', width: '100%', height: '100%' }}
             >
               <img
-                src={item.imgSrc}
+                src='/shopimg/banner.png'
                 alt=""
                 style={{ width: '100%', verticalAlign: 'top', height: '100%' }}
               />
             </a>
-          ))}
+          {/* ))} */}
         </Carousel>
         <Hot1 />
         <Hot2 />
@@ -46,7 +46,7 @@ class Com extends React.Component {
               return (
                 <li key = {index} onClick = { this.goDetail.bind(this) }>
                   <div className = 'img'>
-                    <img src={ item.imgSrc } alt='' />
+                    <img src='/shopimg/shoplist1.png' alt='' />
                   </div>
                   <div className = 'title'>
                     <h4>{ item.title }</h4>

@@ -50,32 +50,6 @@ html, body, #root, .container {
       overflow: auto;
     }
   }
-  .footer {
-    @include rect(100%,0.5rem);
-    background: #fff;
-    ul {
-      @include rect(100%,100%);
-      @include flexbox();
-      a {
-        @include flex();
-        @include flexbox();
-        @include rect(auto,100%);
-        @include flex-direction(column);
-        @include justify-content();
-        @include align-items();
-        color: #666;
-        span {
-          font-size: 0.22rem;
-        }
-        p {
-          font-size: 0.12rem;
-        }
-        &.active {
-          color: #f66;
-        }
-      }
-    }
-  }
 }
 
 .am-drawer.am-drawer-left .am-drawer-draghandle, .am-drawer.am-drawer-right .am-drawer-draghandle {

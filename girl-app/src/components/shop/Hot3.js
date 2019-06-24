@@ -4,16 +4,13 @@ const Com = () => (
   <div className = 'hot-3'>
     <ul>
       <li>
-        <span>超值特惠</span>
-        <img src='' alt='' />
+        <img src='/shopimg/hot3-1.png' alt='' />
       </li>
       <li>
-        <span>人气产品</span>
-        <img src='' alt='' />
+        <img src='/shopimg/hot3-2.png' alt='' />
       </li>
       <li>
-        <span>小红店</span>
-        <img src='' alt='' />
+        <img src='/shopimg/hot3-3.png' alt='' />
       </li>
     </ul>
   </div>

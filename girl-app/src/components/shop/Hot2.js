@@ -7,17 +7,17 @@ const Com = () => (
         <p>双11同价限时购</p>
       </div>
       <div className = 'img'>
-        <img src='' alt='' />
-        <img src='' alt='' />
+        <img src='/shopimg/hot2_1.png' alt='' />
+        <img src='/shopimg/hot2-2.png' alt='' />
       </div>
     </div>
     <div className = 'sell'>
       <div className = 'title'>
-        <p>双11同价限时购</p>
+        <p>双11预售</p>
       </div>
       <div className = 'img'>
-        <img src='' alt='' />
-        <img src='' alt='' />
+        <img src='/shopimg/hot2_3.png' alt='' />
+        <img src='/shopimg/hot2_4.png' alt='' />
       </div>
     </div>
   </div>

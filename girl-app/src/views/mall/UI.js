@@ -49,6 +49,8 @@ class Com extends Component {
             <Tabs tabs={this.state.tabs} 
             onClick = { this.TabClick.bind(this) }
             onChange = { this.TabClick.bind(this) }
+            tabBarActiveTextColor = '#333'
+            tabBarInactiveTextColor = '#999'
             renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
               {this.renderContent.bind(this)}
             </Tabs>
