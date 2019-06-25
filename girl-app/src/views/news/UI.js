@@ -25,22 +25,22 @@ class Com extends Component {
           paddingTop:10,
           marginTop:40,
         }}>更多</h3>
-        <li>我的关注</li>
-        <li>我的收藏</li>
-        <li>我的草稿</li>
+        <li><img src={require('@/views/news/news-img/yan.png')} alt="" /> 我的关注</li>
+        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</li>
+        <li><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</li>
       </ul>
       <ul className= 'lei'>
-        <li>购物车</li>
-        <li>订单</li>
-        <li>PlN卷</li>
-        <li>心愿单</li>
-        <li>pin会员卡</li>
+        <li><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</li>
+        <li><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</li>
+        <li><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</li>
+        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</li>
+        <li><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</li>
       </ul>
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <li>帮助与客服</li>
-        <li>设置</li>
+        <li><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</li>
+        <li><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</li>
       </ul>
 
 

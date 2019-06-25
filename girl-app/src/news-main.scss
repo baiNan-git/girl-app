@@ -97,13 +97,13 @@ html, body, #root, .container {
   padding: 0;
 }
 .box {
-  color: #888;
+  color: #fff;
   P {
     padding-left: 10px;
     width: 100%;
-    font:12px/46px '';
+    font:14px/50px '';
     border-bottom: 1px solid #cecece;
-    background-color: #e7e3e3;
+    background-color: #f298ba;
   }
  
 }
@@ -112,19 +112,31 @@ html, body, #root, .container {
 }
 
 .lei {
-  width: 130px;
-  margin-top:20px;
+  width: 140px;
   margin-left: 50px;
-  border-bottom: 1px solid #cccccc;
+  h3 {
+    font:22px/34px '';
+    color: #fff;
+    text-align: center;
+  }
   
   li {
-    font:10px/38px '';
-    color:#8a8a8a;
+    font:16px/48px '';
+    color:#fff;
     padding-left: 30px;
+    img {
+      padding-right: 6px;
+    }
   }
 }
+.am-list-body {
+  background: #f298ba;
+}
+.my-drawer .am-drawer-sidebar {
+  background: #f298ba;
+}
 
-
-
-
+.am-navbar {
+  background: #ec6a9b;
+}
 
