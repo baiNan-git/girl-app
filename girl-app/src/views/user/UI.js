@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Nologinpass from '@/components/login/Nologinpass';
+import Login from '@/components/login/Login';
 
 class Com extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      login: false
+      login: true
     }
   }
   gotel () {
@@ -19,7 +20,7 @@ class Com extends Component {
       <div className = 'box'>
         <section className = 'content'>
           {
-            this.state.login === true ? <div>还没有数据</div> : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) }/>
+            this.state.login === true ? <Login /> : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) }/>
           }
         </section>
       </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Search from '@/components/home/search';
-import Tj_prolist from '@/components/home/tj_prolist';
-import { Tabs } from 'antd-mobile';
+import Tjprolist from '@/components/home/tj_prolist';
+// import { Tabs } from 'antd-mobile';
 
 
 class Com extends Component {
@@ -9,11 +9,11 @@ class Com extends Component {
     return(
       <div className= "box">
         <header className = "header">
-          <img src = "images/h1.png"  className = "img_src" />      
+          <img src = "/images/h1.png"  className = "img_src" alt=''/>      
         </header>
         <section className = "content">
           <Search />
-          <Tj_prolist />
+          <Tjprolist />
         </section>
       </div>
     )

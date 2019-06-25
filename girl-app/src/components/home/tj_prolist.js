@@ -7,15 +7,17 @@ const Com = () => (
     <p>今日穿搭，很oversize。</p> 
     <div className = "prolist_b">
       <div className = "prolist_l">
-        <img src = "images/h1.png" />
+        <img src = "images/h1.png" alt=""/>
         <span>zl0818</span>
       </div>
       <div className = "prolist_r">
-        <a><img src = "images/scq.png" /></a>
+        <a href='##'>
+          <img src="images/scq.png" alt=''/>
+        </a>
         <span>16</span>
-        <a><img src = "images/pl.png" /></a>
+        <a href='##'><img src = "images/pl.png" alt = ""/></a>
         <span>7</span>
-        <a><img src = "images/dzq.png" /></a>
+        <a href='##'><img src = "images/dzq.png" alt = ""/></a>
         <span>1</span>
       </div>
     </div>
@@ -26,15 +28,15 @@ const Com = () => (
     <p>今日穿搭，很oversize。</p> 
     <div className = "prolist_b">
       <div className = "prolist_l">
-        <img src = "images/h1.png" />
+        <img src = "images/h1.png" alt = ""/>
         <span>zl0818</span>
       </div>
       <div className = "prolist_r">
-        <a><img src = "images/scq.png" /></a>
+        <a href='##'><img src = "images/scq.png" alt = ""/></a>
         <span>16</span>
-        <a><img src = "images/pl.png" /></a>
+        <a href='##'><img src = "images/pl.png" alt = ""/></a>
         <span>7</span>
-        <a><img src = "images/dzq.png" /></a>
+        <a href='##'><img src = "images/dzq.png" alt = ""/></a>
         <span>1</span>
       </div>
     </div>
@@ -45,15 +47,15 @@ const Com = () => (
     <p>今日穿搭，很oversize。</p> 
     <div className = "prolist_b">
       <div className = "prolist_l">
-        <img src = "images/h1.png" />
+        <img src = "images/h1.png" alt = ""/>
         <span>zl0818</span>
       </div>
       <div className = "prolist_r">
-        <a><img src = "images/scq.png" /></a>
+        <a href='##'><img src = "images/scq.png" alt = ""/></a>
         <span>16</span>
-        <a><img src = "images/pl.png" /></a>
+        <a href='##'><img src = "images/pl.png" alt = ""/></a>
         <span>7</span>
-        <a><img src = "images/dzq.png" /></a>
+        <a href='##'><img src = "images/dzq.png" alt = ""/></a>
         <span>1</span>
       </div>
     </div>
