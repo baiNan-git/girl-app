@@ -15,12 +15,16 @@ class Com extends Component {
   gohome () {
     this.props.history.push('/')
   }
+  goInfodata () {
+    this.props.history.push('/detail/infodata')
+  }
   render () {
     return(
       <div className = 'box'>
         <section className = 'content'>
           {
-            this.state.login === true ? <Login /> : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) }/>
+            this.state.login === true ? <Login goInfodata = { this.goInfodata.bind(this) }/>
+            : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) } />
           }
         </section>
       </div>
