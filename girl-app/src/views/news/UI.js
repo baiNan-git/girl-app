@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Drawer, List, NavBar } from 'antd-mobile';
+import {  NavLink } from 'react-router-dom';
 // class Com extends Component {
 //   render () {
 //     return(
@@ -10,6 +11,7 @@ import { Drawer, List, NavBar } from 'antd-mobile';
 //   }
 // }
 class Com extends Component {
+  
   state = {
     open: false,
   }
@@ -19,28 +21,30 @@ class Com extends Component {
   render() {
     // fix in codepen
     const sidebar = (<List>
+
+
       <ul className= 'lei'>
         <h3 style={{
           fontWeight:400,
           paddingTop:10,
           marginTop:40,
         }}>更多</h3>
-        <li>我的关注</li>
-        <li>我的收藏</li>
-        <li>我的草稿</li>
+        <NavLink to ='/guan'><img src={require('@/views/news/news-img/yan.png')} alt="" /> 我的关注</NavLink>
+        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</li>
+        <li><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</li>
       </ul>
       <ul className= 'lei'>
-        <li>购物车</li>
-        <li>订单</li>
-        <li>PlN卷</li>
-        <li>心愿单</li>
-        <li>pin会员卡</li>
+        <li><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</li>
+        <li><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</li>
+        <li><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</li>
+        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</li>
+        <li><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</li>
       </ul>
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <li>帮助与客服</li>
-        <li>设置</li>
+        <li><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</li>
+        <li><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</li>
       </ul>
 
 
@@ -50,18 +54,7 @@ class Com extends Component {
     return (<div style={{
       position: "relative"
     }}>
-      {/* <NavBar className="iconfont icon-caidan" onLeftClick={this.onOpenChange}>消息</NavBar> */}
-      {/* <div className= 'box' style={{
-        position:"absolute",
-        top: 60,
-        left: 10
-      }}>
-        <p>双方事故是的感受到方式</p>
-        <p>双方事故是的感受到方式</p>
-        <p>双方事故是的感受到方式</p>
-        <p>双方事故是的感受到方式</p>
-        
-      </div> */}
+      
 
       <Drawer
         className="my-drawer"
@@ -74,11 +67,36 @@ class Com extends Component {
       >
         <div className='box-left'>
         <NavBar className="iconfont icon-caidan" onLeftClick={this.onOpenChange}>消息</NavBar>
-          <p>收藏的赞和收藏</p>
-          <p>收到的评论和@</p>
-          <p>新增关注</p>
-          <p>通知消息</p>
-          <p style={{marginTop: 20}}>私信</p>
+          <ul className = 'xiao'>
+            <li>
+                <img src={require('@/views/news/news-img/p1.png')} alt="" />
+                <p>赞和收藏</p>
+              </li>
+              <li>
+                <img src={require('@/views/news/news-img/ren.png')} alt="" />
+                <p>新增关注</p>
+              </li>
+              <li>
+                <img src={require('@/views/news/news-img/weixin.png')} alt="" />
+                <p>评论和@</p>
+            </li>
+          </ul>
+          <ul className = 'xiao2'>
+            <li>
+              <img src={require('@/views/news/news-img/ling.png')} alt="" />
+              <div>
+                <h3>通知消息</h3>
+                <span>新功能上线，请查收</span>
+              </div>
+            </li>
+            <li>
+              <img src={require('@/views/news/news-img/tou.png')} alt="" />
+              <div>
+                <h3>通知消息</h3>
+                <span>新功能上线，请查收</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </Drawer>
     </div>);
