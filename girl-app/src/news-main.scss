@@ -69,16 +69,7 @@ html, body, #root, .container {
   width: 300px;
   padding: 0;
 }
-.box-left {
-  color: #888;
-  P {
-    padding-left: 10px;
-    width: 100%;
-    font:12px/46px '';
-    border-bottom: 1px solid #cecece;
-    background-color: #e7e3e3;
-  }
-}
+
 .box-left {
  .xiao {
    background: #fff;
@@ -144,7 +135,7 @@ html, body, #root, .container {
 
 
 .icon-caidan:before {
-  padding-left: 8px;font-size: 20px
+  padding-left: 14px;font-size: 20px
 }
 
 .lei {
@@ -156,7 +147,8 @@ html, body, #root, .container {
     text-align: center;
   }
   
-  li {
+  a {
+    display: block;
     font:16px/48px '';
     color:#fff;
     padding-left: 30px;
@@ -186,6 +178,125 @@ html, body, #root, .container {
 .icon-caidan:before {
   font-size: 24px;
 }
-.content {
-  // color: #0f0;
+
+.guan {
+  .guan-header {
+    height: 60px;
+    text-align: center;
+    background: #ec6a9b;
+    font-family:MicrosoftYaHei;
+    i {
+      float: left;
+      font:22px/60px "";
+      color: #fff;
+      margin-left: 8px;
+    }
+    span {
+      font:19px/60px "";
+      color: #fff;
+    }
+  }
+}
+.guan {
+  .am-tabs-default-bar-content {
+    background: #ec6a9b;
+  }
+  .am-tabs-default-bar-tab-active {
+    color: #fff;
+    border-bottom: 1px solid blue;
+  }
+  .am-tabs-default-bar-content {
+    color:#E6E6E6;
+  }
+  .am-tabs-default-bar-tab {
+    font-size: 17px;
+    font-weight:400;
+    font-family:MicrosoftYaHei;
+  }
+  .am-tabs, .am-tabs-horizontal, .am-tabs-top {
+    overflow: auto;
+    height: 564px;
+  }
+
+}
+
+.yonghu {
+  margin-top: 20px;
+  width: 100%;
+  background: #fff;
+  .yonghu-t {
+    @include flexbox();
+    @include justify-content(space-between);
+    
+    i {
+      font:16px/40px '';
+      font-family:MicrosoftYaHei;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-left: 22px;
+    }
+    span {
+      font:16px/40px '';
+      font-family:MicrosoftYaHei;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-right: 16px;
+    }
+  }
+  .yonghu-c {
+    ul {
+      li {
+        padding:14px 0 ;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        .yonghu-c-l {
+          @include align-items();
+          @include flexbox(column);
+          
+          img {
+            height: 45px;
+            width: 45px;
+          }
+
+        }
+        .yonghu-c-r {
+          width: 72px;
+          height: 30px;
+          background: #ffa9cc;
+          text-align: center;
+          font:14px/30px '';
+          color: #f8f8f8;
+          border-radius: 10%;
+        }
+      }
+    }
+  }
+}
+
+.shouchang {
+  background: #fff;
+  height: '289px';
+  width: 100%;
+  ul {
+    width: 375px;
+   @include flexbox();
+   @include flex-wrap(wrap);
+   @include justify-content(space-around);
+    li {
+      .shou-t {
+        img {
+          width: 160px;
+          height:196px;
+        }
+        p {
+          font-size:12px;
+          font-family:MicrosoftYaHei;
+          font-weight:400;
+          color:rgba(77,77,77,1);
+          line-height:22px;
+        }
+      }
+    }
+  }
 }

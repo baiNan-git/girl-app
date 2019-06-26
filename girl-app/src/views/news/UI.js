@@ -29,22 +29,22 @@ class Com extends Component {
           paddingTop:10,
           marginTop:40,
         }}>更多</h3>
-        <NavLink to ='/guan'><img src={require('@/views/news/news-img/yan.png')} alt="" /> 我的关注</NavLink>
-        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</li>
-        <li><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</li>
+        <NavLink to ='/guan'><img src={require('@/views/news/news-img/yan.png')} alt="" style={{paddingRight:0}}/> 我的关注</NavLink>
+        <NavLink to ='/shou'><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</NavLink>
+        <NavLink><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</NavLink>
       </ul>
       <ul className= 'lei'>
-        <li><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</li>
-        <li><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</li>
-        <li><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</li>
-        <li><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</li>
-        <li><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</li>
+        <NavLink><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
+        <NavLink><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
+        <NavLink><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
+        <NavLink><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
+        <NavLink><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
       </ul>
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <li><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</li>
-        <li><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</li>
+        <NavLink><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
+        <NavLink to ='/she'><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</NavLink>
       </ul>
 
 
