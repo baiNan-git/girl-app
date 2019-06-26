@@ -19,23 +19,18 @@ const App = () => (
     <footer className = 'footer'>
       <ul>
         <NavLink to ='/home'>
-          <span></span>
           <p>首页</p>
         </NavLink>
         <NavLink to ='/mall'>
-          <span></span>
           <p>商城</p>
         </NavLink>
         <NavLink to ='/photo'>
-          <span></span>
-          <p>拍照</p>
+          <img src='/shopimg/jia.png' alt=''/>
         </NavLink>
         <NavLink to ='/news'>
-          <span></span>
           <p>消息</p>
         </NavLink>
-        <NavLink to ='/user'>
-          <span></span>
+        <NavLink to ='/detail/user'>
           <p>我的</p>
         </NavLink>
       </ul>

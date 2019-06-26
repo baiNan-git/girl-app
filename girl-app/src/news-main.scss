@@ -1,0 +1,104 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container {
+  @include rect(100%,100%);
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flexbox();
+    @include flex();
+    @include rect(100%,auto);
+    @include flex-direction(column);
+    .header {
+      @include rect(100%,0.44rem);
+      @include flexbox();
+      // background: linear-gradient(to right,  orange 0%,#FFBBFF 100%);
+      .search {
+        @include flexbox();
+        @include align-items();
+        background: #fff;
+        @include rect(80%,70%);
+        border-radius: 0.15rem;
+        font-size: 0.14rem;
+        margin: 0.07rem 0.1rem 0 0.1rem;
+        color: #999;
+        .icon-xiazai17 {
+          margin: 0 0.1rem;
+        }
+      }
+      .cartshop {
+        @include flexbox();
+        @include align-items();
+        @include rect(15%,0.44rem);
+        span {
+          @include rect(100%,100%);
+          @include flexbox();
+          @include align-items();
+          margin-left: 0.05rem;
+        }
+        .icon-gouwuche {
+          font-size: 0.24rem;
+          color: #fff;
+        }
+      }
+    }
+    .content {
+      @include flex();  
+      @include rect(100%,auto);
+      overflow: auto;
+    }
+  }
+}
+
+.am-drawer.am-drawer-left .am-drawer-draghandle, .am-drawer.am-drawer-right .am-drawer-draghandle {
+  width: 0px;
+}
+
+.my-drawer {
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.my-drawer .am-drawer-sidebar {
+  background-color: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.my-drawer .am-drawer-sidebar .am-list {
+  width: 300px;
+  padding: 0;
+}
+.box-left {
+  color: #888;
+  P {
+    padding-left: 10px;
+    width: 100%;
+    font:12px/46px '';
+    border-bottom: 1px solid #cecece;
+    background-color: #e7e3e3;
+  }
+ 
+}
+.icon-caidan:before {
+  padding-left: 8px;font-size: 20px
+}
+
+.lei {
+  width: 130px;
+  margin-top:20px;
+  margin-left: 50px;
+  border-bottom: 1px solid #cccccc;
+  
+  li {
+    font:10px/38px '';
+    color:#8a8a8a;
+    padding-left: 30px;
+  }
+}
+
+
+
+
+

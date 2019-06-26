@@ -20,6 +20,17 @@ html, body, #root, .container {
        @include border-radius(50%);
        margin: 0.05rem 0.59rem 0 0.11rem;
       }
+      .home-prolist {
+        @include flexbox();
+        @include flex();
+       .homes {
+        margin: 0.06rem 0.16rem;
+        border: none;
+        background: none;
+        font-size: 0.16rem;
+        color: #FFFFFF; 
+       }
+      }
     }
   }
     .content {
@@ -28,18 +39,18 @@ html, body, #root, .container {
       @include rect(100%,auto);
       overflow: auto;
       .home-search {
+        @include flex();
         @include flexbox();
         @include rect(100%,0.4rem);
-        background-color: #fff;
-        // position: fixed;
+        background-color: #FFFFFF;;
         justify-content: center;
+        align-items: center;
         .search {
           @include rect(80%,0.23rem);
           @include align-items();
           @include flexbox();
           background: #f1f1f1;
           border-radius: 0.38rem;
-          margin-top: 0.05rem;
           span {
             color: #999999;
             width: 0.3rem;
@@ -53,17 +64,20 @@ html, body, #root, .container {
         }
       }
     .tj {
-      
+      background-color: #f5f7f9;
+      overflow: hidden;
+      padding-bottom: .5rem;
     .tj_prolist {
-      margin-top: 0.5rem;
+      overflow: hidden;
+      margin: .1rem;
       @include flexbox();
-      margin: 0 auto;
       @include flex-direction(column);
       @include rect(96%, 2.7rem);
-      @include border-radius(0.1rem);
+      @include border-radius(0.12rem);
       background-color: #FFFFFF;
+      margin: .1rem auto;
       .img_src {
-
+          
       }
       p {
         font-size: 0.14rem;
@@ -73,6 +87,7 @@ html, body, #root, .container {
       .prolist_b {
         overflow: hidden;
         .prolist_l {
+          margin-left: .14rem;
           img {
             @include rect(0.3rem, 0.3rem);
           }
@@ -96,8 +111,83 @@ html, body, #root, .container {
       }
     } 
   }
+  .find-prolist {
+    @include flexbox();
+    @include flex();
+    @include rect(100%, .22rem);
+    background-color: #f5f7f9;
+    justify-content: center;
+    align-items: center;
+    .find {
+        margin: 0.06rem 0.16rem;
+        border: none;
+        background: none;
+        font-size: 0.14rem;
+        line-height: .22rem;
+        color: #333333;
+        margin: 0 auto;
+        margin: 0.28rem 0.3rem;
     }
- 
+  }
+  .recommend { 
+    background-color:#f5f7f9;
+    padding-bottom: .5rem;
+    overflow: hidden;
+  .cj_prolist {
+    overflow: hidden;
+    @include flexbox();
+    @include flex-direction(column);
+    @include rect(46%, 2.7rem);
+    @include border-radius(0.06rem);
+    background-color: #FFFFFF;
+    margin:.05rem 2%;
+    float: left;
+    .img_src {
+      @include rect(1.75rem, 1.98rem);
+    }
+    p {
+      font-size: 0.11rem;
+      color: #333333;
+      width:1.44rem;
+      line-height: .22rem;
+      margin-left: .1rem;
+    }
+    .recommend_b {
+      overflow: hidden;
+      .recommend_l {
+        margin-left: .1rem;
+        img {
+          @include rect(0.25rem, 0.25rem);
+        }
+        span {
+          font-size: .05rem;
+          color: #999999;
+          margin-left: 0.05rem;
+        }
+        float: left;
+      }
+      .recommend_r {
+        float: right;
+        span {
+         padding: 0.06rem;
+         text-align: center;
+        }
+        a {
+          text-align: center;
+         img{
+          @include rect(.15rem, .14rem);
+         }
+        }
+      }
+    }
+  } 
+}
+
+
+
+    }
+
+
   .footer {
     @include rect(100%,0.5rem);
     background: #FFFFFF;

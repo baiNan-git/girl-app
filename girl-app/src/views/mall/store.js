@@ -1,10 +1,13 @@
 const reducer = (state = {
-  list1: [],
+  bannerlist: [1, 2],
+  shoplist: [],
 }, action) =>{
   const {type, data} = action;
   switch (type) {
-    case '':
-      return Object.assign({}, state, {list1: data});
+    case 'changeBannerlist':
+      return Object.assign({}, state, {bannerlist: data});
+    case 'changeShoplist':
+      return Object.assign({}, state, {shoplist: data});
     default:
       return state;
   }
