@@ -147,7 +147,8 @@ html, body, #root, .container {
     text-align: center;
   }
   
-  li {
+  a {
+    display: block;
     font:16px/48px '';
     color:#fff;
     padding-left: 30px;
@@ -264,6 +265,33 @@ html, body, #root, .container {
           font:14px/30px '';
           color: #f8f8f8;
           border-radius: 10%;
+        }
+      }
+    }
+  }
+}
+
+.shouchang {
+  background: #fff;
+  height: '289px';
+  width: 100%;
+  ul {
+    width: 375px;
+   @include flexbox();
+   @include flex-wrap(wrap);
+   @include justify-content(space-around);
+    li {
+      .shou-t {
+        img {
+          width: 160px;
+          height:196px;
+        }
+        p {
+          font-size:12px;
+          font-family:MicrosoftYaHei;
+          font-weight:400;
+          color:rgba(77,77,77,1);
+          line-height:22px;
         }
       }
     }
