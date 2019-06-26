@@ -31,19 +31,19 @@ class Com extends Component {
         }}>更多</h3>
         <NavLink to ='/guan'><img src={require('@/views/news/news-img/yan.png')} alt="" style={{paddingRight:0}}/> 我的关注</NavLink>
         <NavLink to ='/shou'><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</NavLink>
-        <NavLink><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</NavLink>
       </ul>
       <ul className= 'lei'>
-        <NavLink><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
-        <NavLink><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
-        <NavLink><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
-        <NavLink><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
-        <NavLink><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
+        <NavLink to ='/an'><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
       </ul>
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <NavLink><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
+        <NavLink to =''><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
         <NavLink to ='/she'><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</NavLink>
       </ul>
 
