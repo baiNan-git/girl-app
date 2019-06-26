@@ -44,7 +44,7 @@ class Com extends Component {
         borderBottom:0,
       }}>
         <li><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</li>
-        <li><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</li>
+        <NavLink to ='/she'><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</NavLink>
       </ul>
 
 

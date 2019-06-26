@@ -5,6 +5,7 @@ import Photo from '@/views/photo';
 import News from '@/views/news';
 import User from '@/views/user';
 import Guan from '@/views/news/guanzhu';
+import She from '@/views/infodata';
 import { Switch, Route, NavLink, Redirect} from 'react-router-dom';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
       <Route path = '/news' component = { News }/>
       <Route path = '/user' component = { User }/>
       <Route path = "/guan" component = { Guan } />
+      <Route path = "/she" component = { She } />
       <Redirect to = '/home'/>
     </Switch>
     <footer className = 'footer'>
