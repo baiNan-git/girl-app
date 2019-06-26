@@ -14,6 +14,7 @@ html, body, #root, .container {
     .header {
       @include rect(100%,0.44rem);
       @include flexbox();
+      // background: linear-gradient(to right,  orange 0%,#FFBBFF 100%);
       .search {
         @include flexbox();
         @include align-items();
