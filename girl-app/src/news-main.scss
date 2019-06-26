@@ -211,8 +211,15 @@ html, body, #root, .container {
   font-weight:400;
   font-family:MicrosoftYaHei;
 }
+.am-tabs, .am-tabs-horizontal, .am-tabs-top {
+  overflow: auto;
+  height: 564px;
+}
+
 .yonghu {
+  margin-top: 20px;
   width: 100%;
+  background: #fff;
   .yonghu-t {
     @include flexbox();
     @include justify-content(space-between);
@@ -235,7 +242,7 @@ html, body, #root, .container {
   .yonghu-c {
     ul {
       li {
-        margin-top: 26px;
+        padding:14px 0 ;
         @include flexbox();
         @include justify-content(space-between);
         @include align-items(center);
