@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Drawer, List, NavBar } from 'antd-mobile';
+import { Drawer, List, NavBar,Icon } from 'antd-mobile';
 import {  NavLink } from 'react-router-dom';
 // class Com extends Component {
 //   render () {
@@ -66,7 +66,8 @@ class Com extends Component {
         onOpenChange={this.onOpenChange}
       >
         <div className='box-left'>
-        <NavBar className="iconfont icon-caidan" onLeftClick={this.onOpenChange}>消息</NavBar>
+
+        <NavBar icon={<span className='iconfont icon-caidan'/>} onLeftClick={this.onOpenChange}>消息</NavBar>
           <ul className = 'xiao'>
             <li>
                 <img src={require('@/views/news/news-img/p1.png')} alt="" />
@@ -92,8 +93,8 @@ class Com extends Component {
             <li>
               <img src={require('@/views/news/news-img/tou.png')} alt="" />
               <div>
-                <h3>通知消息</h3>
-                <span>新功能上线，请查收</span>
+                <h3>私信</h3>
+                <span>附近人打个招呼？</span>
               </div>
             </li>
           </ul>
