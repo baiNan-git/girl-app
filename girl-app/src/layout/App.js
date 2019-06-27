@@ -7,6 +7,7 @@ import User from '@/views/user';
 import Guan from '@/views/news/guanzhu';
 import Shou from '@/views/news/shouchang';
 import She from '@/views/infodata';
+import Smallpink from '@/views/smallpink';
 import { Switch, Route, NavLink, Redirect} from 'react-router-dom';
 
 const App = () => (
@@ -20,7 +21,8 @@ const App = () => (
       <Route path = "/guan" component = { Guan } />
       <Route path = "/shou" component = { Shou } />
       <Route path = "/she" component = { She } />
-      <Redirect to = '/home'/>
+      <Route path = "/smallpink" component = { Smallpink } />
+      <Redirect to = '/mall'/>
     </Switch>
     <footer className = 'footer'>
       <ul>
