@@ -70,35 +70,234 @@ html, body, #root, .container {
   width: 300px;
   padding: 0;
 }
+
 .box-left {
-  color: #888;
-  P {
-    padding-left: 10px;
-    width: 100%;
-    font:12px/46px '';
-    border-bottom: 1px solid #cecece;
-    background-color: #e7e3e3;
-  }
- 
+ .xiao {
+   background: #fff;
+   @include rect(100%,100%);
+   @include flexbox();
+   width: 360px;
+   margin:10px 8px 10px 8px;
+   li {
+    float: left;
+    @include flex();
+    @include flexbox();
+    @include rect(auto,100%);
+    @include flex-direction(column);
+    @include justify-content();
+    @include align-items();
+    margin: 14px 0;
+    img {
+      width: 40px;height: 40px;
+    }
+    p {
+      margin-top: 12px;
+      color:rgba(102,102,102,1);
+      font-weight:bold;
+      font-family:MicrosoftYaHei;
+      font-size: 13px;
+    }
+   }
+ }
+ .xiao2 {
+  width: 360px;
+  margin:0px 8px 10px 8px;
+   li {
+    @include align-items();
+    @include flexbox(column);
+    background: #fff;
+    margin-bottom: 14px;
+    height:44px;
+    img {
+      width: 25px;
+      height:25px;
+      margin-left: 6px;
+    }
+    div {
+      line-height: 1.3;
+      margin-left: 5px;
+      h3 {
+        font-size:12px;
+        font-family:MicrosoftYaHei;
+        font-weight:bold;
+        color:rgba(102,102,102,1);
+      }
+      span {
+        font-size:10px;
+        font-family:MicrosoftYaHei;
+        font-weight:bold;
+        color:rgba(153,153,153,1);
+      }
+    }
+   }
+ }
 }
+
+
+
 .icon-caidan:before {
-  padding-left: 8px;font-size: 20px
+  padding-left: 14px;font-size: 20px
 }
 
 .lei {
-  width: 130px;
-  margin-top:20px;
+  width: 140px;
   margin-left: 50px;
-  border-bottom: 1px solid #cccccc;
+  h3 {
+    font:22px/34px '';
+    color: #fff;
+    text-align: center;
+  }
   
-  li {
-    font:10px/38px '';
-    color:#8a8a8a;
+  a {
+    display: block;
+    font:16px/48px '';
+    color:#fff;
     padding-left: 30px;
+    img {
+      padding-right: 6px;
+    }
+  }
+}
+.am-list-body {
+  background: #f298ba;
+}
+.my-drawer .am-drawer-sidebar {
+  background: #f298ba;
+}
+
+.am-navbar {
+  background: #ec6a9b;
+  margin-top: 20px;
+}
+.am-drawer-content {
+  background: #F6F7F9;
+}
+
+.am-navbar-title {
+  font-size: 20px;
+}
+.icon-caidan:before {
+  font-size: 24px;
+}
+
+.guan {
+  .guan-header {
+    height: 60px;
+    text-align: center;
+    background: #ec6a9b;
+    font-family:MicrosoftYaHei;
+    i {
+      float: left;
+      font:22px/60px "";
+      color: #fff;
+      margin-left: 8px;
+    }
+    span {
+      font:19px/60px "";
+      color: #fff;
+    }
+  }
+}
+.guan {
+  .am-tabs-default-bar-content {
+    background: #ec6a9b;
+  }
+  .am-tabs-default-bar-tab-active {
+    color: #fff;
+    border-bottom: 1px solid blue;
+  }
+  .am-tabs-default-bar-content {
+    color:#E6E6E6;
+  }
+  .am-tabs-default-bar-tab {
+    font-size: 17px;
+    font-weight:400;
+    font-family:MicrosoftYaHei;
+  }
+  .am-tabs, .am-tabs-horizontal, .am-tabs-top {
+    overflow: auto;
+    height: 564px;
+  }
+
+}
+
+.yonghu {
+  margin-top: 20px;
+  width: 100%;
+  background: #fff;
+  .yonghu-t {
+    @include flexbox();
+    @include justify-content(space-between);
+    
+    i {
+      font:16px/40px '';
+      font-family:MicrosoftYaHei;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-left: 22px;
+    }
+    span {
+      font:16px/40px '';
+      font-family:MicrosoftYaHei;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      margin-right: 16px;
+    }
+  }
+  .yonghu-c {
+    ul {
+      li {
+        padding:14px 0 ;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        .yonghu-c-l {
+          @include align-items();
+          @include flexbox(column);
+          
+          img {
+            height: 45px;
+            width: 45px;
+          }
+
+        }
+        .yonghu-c-r {
+          width: 72px;
+          height: 30px;
+          background: #ffa9cc;
+          text-align: center;
+          font:14px/30px '';
+          color: #f8f8f8;
+          border-radius: 10%;
+        }
+      }
+    }
   }
 }
 
-
-
-
-
+.shouchang {
+  background: #fff;
+  height: '289px';
+  width: 100%;
+  ul {
+    width: 375px;
+   @include flexbox();
+   @include flex-wrap(wrap);
+   @include justify-content(space-around);
+    li {
+      .shou-t {
+        img {
+          width: 160px;
+          height:196px;
+        }
+        p {
+          font-size:12px;
+          font-family:MicrosoftYaHei;
+          font-weight:400;
+          color:rgba(77,77,77,1);
+          line-height:22px;
+        }
+      }
+    }
+  }
+}

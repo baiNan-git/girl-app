@@ -10,7 +10,7 @@ html, body, #root, .container {
   .box {
     @include flexbox();
     @include flex();
-    @include rect(100%,auto);
+    @include rect(100%,100%);
     @include flex-direction(column);
     .shop-content {
       @include flex();  
@@ -46,8 +46,9 @@ html, body, #root, .container {
 }
 .shop-search {
   @include flexbox();
-  @include rect(100%,0.44rem);
+  @include rect(100%,0.64rem);
   @include align-items();
+  padding-top: 0.2rem;
   background: #EC6A9B;
   position: fixed;
   top: 0;
@@ -77,13 +78,22 @@ html, body, #root, .container {
   }
 }
 .content-z  {
-  padding: 0 0.1rem;
-  margin-top: 0.4rem;
-  .am-tabs-default-bar-content{
-    height: 0.35rem;
-    .am-tabs-default-bar-tab{
-      height: 0.35rem;
+  margin-top: 0.64rem;
+  .am-tabs-default-bar-content {
+    height: 0.4rem;
+    .am-tabs-default-bar-tab {
+      height: 0.4rem;
     }
+  }
+  .am-tabs-default-bar-underline {
+    border: none;
+  }
+  .am-tabs-default-bar-tab {
+    font-size: 0.14rem;
+  }
+}
+  .tuijian {
+    padding: 0 0.12rem;
   }
   .hot {
     @include flexbox();
@@ -165,6 +175,803 @@ html, body, #root, .container {
           width: 100%;
           height: 100%;
         }
+      }
+    }
+  }
+  .shop-prolist {
+    // @include rect(100%,100%);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    li {
+      @include flexbox();
+      @include rect(1.64rem,1.89rem);
+      @include flex-direction(column);
+      // @include justify-content(center);
+      float: left;
+      // height: 1.8rem;
+      background: #fff;
+      padding: 0.05rem 0.28rem 0;
+      margin: 0 0.1rem 0.1rem 0;
+      .img{
+        @include rect(1.1rem,0.95rem);
+        margin: 0 auto;
+        background: #ccc;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        font-size: 0.1rem;
+        color: #333;
+        h4 {
+          line-height: 0.3rem;
+        }
+        p {
+          color: #999;
+          line-height: 0.2rem;
+        }
+        span {
+          line-height: 0.2rem;
+
+        }
+      }
+    }
+  }
+
+.am-carousel {
+  height: 1.80rem;
+  .am-carousel-wrap-dot-active > span {
+    background: #EC6A9B;
+  }
+}
+// .am-tabs-default-bar-underline {
+//   color: #f80;
+// }
+
+.nologin, .nologintel, .nologincode {
+  .back {
+    @include flexbox();
+    @include justify-content(space-between);
+    padding-top: 0.15rem;
+    margin-bottom: 0.3rem;
+    color: #999;
+    font-size: 0.14rem;
+    span {
+      padding: 0.05rem 0.15rem;
+    }
+  }
+  .from {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items();
+    color: #666;
+    h4 {
+      font: 400 0.18rem/0.4rem "";
+      margin-bottom: 0.4rem;
+    }
+    .inputcode{
+      margin-top: 1rem;
+    }
+    .codeinput{
+      input {
+        text-align: center;
+      }
+    }
+    .user {
+      @include flexbox();
+      @include align-items();
+      width: 2.95rem;
+      height: 0.39rem;
+      margin: 0 auto;
+      border-radius: 0.2rem;
+      border: 0.01rem solid #DCDCDC;
+      color: #666;
+      margin-bottom: 0.17rem;
+      span {
+        margin: 0 0.2rem 0 0.26rem;
+      }
+      input {
+        @include rect(100%,0.2rem);
+        border: none;
+        background: none;
+      }
+    }
+    .pass {
+      @include flexbox();
+      @include align-items();
+      width: 2.95rem;
+      height: 0.39rem;
+      margin: 0 auto;
+      border-radius: 0.2rem;
+      border: 0.01rem solid #DCDCDC;
+      color: #666;
+      span {
+        // @include flexbox();
+        width: 0.18rem;
+        height: 0.2rem;
+        background: url('/shopimg/pass.png') no-repeat;
+        background-size: 0.14rem 0.2rem;
+        margin: 0 0.33rem 0 0.3rem;
+      }
+      input {
+        @include rect(100%,0.2rem);
+        border: none;
+        background: none;
+      }
+    }
+    button {
+      @include rect(80%,0.4rem);
+      border: none;
+      background: #EC6A9B;
+      margin-bottom: 0.15rem;
+      margin-top: 0.2rem;
+      border-radius: 0.2rem;
+      color: #fff;
+    }
+    .option {
+      @include rect(80%,0.3rem);
+      margin-bottom: 1.5rem;
+      color: #EC6A9B;
+      font-size: 0.12rem;
+      .s1{
+        float: left;
+      }
+      .s2{
+        float: right;
+      }
+    }
+    .link {
+      width: 80%;
+      text-align: center;
+      .qi {
+        @include flexbox();
+        @include align-items();
+        margin-bottom: 0.3rem;
+        .xian {
+          width: 0.87rem;
+          height: 0.01rem;
+          background: #EC6A9B;
+        }
+        h5 {
+          font-size: 0.14rem;
+          font-weight: 500;
+          color: #666;
+          margin: 0 0.15rem;
+        }
+      }
+      .link-c {
+        @include rect(100%,0.4rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items();
+        .s1 {
+          background: url('/shopimg/weixin.png') no-repeat;
+          width: 0.3rem;
+          height: 0.25rem;
+          background-size: 0.3rem 0.25rem; 
+        }
+        .s2 {
+          background: url('/shopimg/qq2.png') no-repeat;
+          width: 0.2rem;
+          height: 0.23rem;
+          background-size: 0.2rem 0.23rem; 
+        }
+        .s3 {
+          background: url('/shopimg/weibo.png') no-repeat;
+          width: 0.28rem;
+          height: 0.31rem;
+          background-size: 0.28rem 0.31rem; 
+        }
+      }
+    }
+    .xieyi {
+      font-size: 0.1rem;
+      color: #666;
+      margin-top: 0.2rem;
+      i {
+        color: #EC6A9B;
+      }
+    }
+  }
+}
+.content {
+  height: 100%;
+}
+.login {
+  height: 100%;
+  .header {
+    @include rect(100%, 0.91rem);
+    @include flexbox();
+    @include justify-content(space-between);
+    background: #EC6A9B;
+    padding-top: 0.13rem;
+    .menu {
+      background: url('/user/menu.png') no-repeat;
+      @include rect(0.3rem, 0.3rem);
+      background-size: 0.3rem, 0.3rem;
+      margin-left: 0.1rem;
+    }
+    .in {
+      @include flexbox();
+      @include flex-direction(column);
+      width: 1rem;
+      color: #fff;
+      text-align: center;
+      .s1 {
+        // @include flexbox();
+        font-size: 0.18rem;
+        margin-top: 0.12rem;
+      }
+      .s2 {
+        font-size: 0.14rem;
+        margin-top: 0.1rem;
+      }
+    }
+    .share {
+      background: url('/user/cai.png') no-repeat;
+      @include rect(0.22rem, 0.2rem);
+      background-size: 0.222rem, 0.2rem;
+      margin-right: 0.17rem;
+    }
+  }
+  .cont {
+    width: 100%;
+    height: 100%;
+    background: #f5f7f9;
+    padding: 0.08rem;
+    .cont-t {
+      border-radius: 0.12rem;
+      background: #fff;
+      @include flexbox();
+      @include flex-direction(column);
+      height: 1.36rem;
+      .cont-r {
+        @include flexbox();
+        .img {
+          @include rect(0.71rem,0.69rem);
+          margin: 0.12rem 0 0 0.12rem;
+        }
+        .cont-r-t {
+          @include flexbox();
+          @include flex();
+          @include flex-direction(column);
+          .top {
+            @include flexbox();
+            @include justify-content(space-around);
+            padding-top: 0.07rem;
+            .num {
+              @include flexbox();
+              @include flex-direction(column);
+              text-align: center;
+              color: #000;
+              .number {
+                margin-bottom: 0.07rem;
+              }
+            }
+          }
+          .bottom {
+            @include flexbox();
+            @include align-items;
+            @include justify-content();
+            margin: 0.11rem auto 0;
+            background: url('/user/geren.png')no-repeat;
+            width: 0.9rem;
+            height: 0.31rem;
+            border-radius: 0.08rem;
+            color: #fff;
+          }
+        }
+      }
+      .say {
+        background: url('/user/chang.png')no-repeat;
+        width: 3.51rem;
+        height: 0.26rem;
+        margin: 0.08rem auto 0;
+        input {
+          border: none;
+          background: none;
+          width: 100%;
+          height: 100%;
+          font: 0.12rem/0.26rem "";
+          text-indent: 0.1rem;
+          color: #666;
+        }
+      }
+    }
+    .coll {
+      @include flexbox();
+      @include justify-content(space-around);
+      @include align-items();
+      background: #fff;
+      margin-top: 0.1rem;
+      border-radius: 0.12rem;
+      height: 0.62rem;
+      color: #fff;
+      .s1 {
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include rect(1.02rem,0.31rem);
+        background: url('/user/duan1.png')no-repeat;
+      }
+      .s2 {
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include rect(1.02rem,0.31rem);
+        background: url('/user/duan2.png')no-repeat;
+      }
+    }
+  }
+}
+.box {
+  height: 100%;
+}
+.infodata {
+  background: #f5f7f9;
+  height: 100%;
+  .header {
+    @include rect(100%,0.61rem);
+    @include flexbox();
+    @include align-items();
+    background: #EC6A9B;
+    margin-bottom: 0.12rem;
+    span {
+      width: 0.12rem;
+      height: 0.2rem;
+      background: url('/user/back.png')no-repeat;
+      background-size: 0.12rem 0.2rem;
+      margin-left: 0.13rem;
+    }
+    p {
+      @include flex();
+      text-align: center;
+      color: #fff;
+      font-size: 0.18rem;
+      margin-right: 0.13rem;
+    }
+  }
+  ul {
+    width: 3.59rem;
+    border-radius: 0.12rem;
+    background: #fff;
+    margin: 0 auto 0.12rem;
+    padding: 0 0.26rem 0 0.21rem;
+    li {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items();
+      height: 0.51rem;
+      span {
+        font-size: 0.16rem;
+        color: #666;
+      }
+      i {
+        background: url('/user/to1.png')no-repeat;
+        background-size: 0.08rem 0.15rem;
+        width: 0.08rem;
+        height: 0.15rem;
+      }
+    }
+    li:nth-child(1) {
+      border-bottom: 0.01rem solid #eee;
+    }
+    li.te {
+      border-bottom: 0.01rem solid #eee;
+    }
+  }
+  .infologin {
+    background: url('/user/juxing.png')no-repeat;
+    background-size: 3.59rem 0.51rem;
+    width: 3.59rem;
+    height: 0.51rem;
+    border-radius: 0.12rem;
+    margin: 0 auto;
+    @include flexbox();
+    @include align-items();
+    color: #fff;
+    @include justify-content();
+    font-size: 0.2rem;
+  }
+}
+
+.skin, .coluor {
+  @include rect(100%,auto);
+  background: #f5f7f9;
+  margin-top: 0.06rem;
+  margin-bottom: 0.5rem;
+  ul {
+    padding: 0 0.04rem 0 0.12rem;
+    li {
+      float: left;
+      background: #fff;
+      width: 1.71rem;
+      height: 2.42;
+      margin-right: 0.08rem;
+      .img {
+        @include flexbox();
+        @include justify-content();
+        @include rect(100%,1.74rem);
+        @include align-items();
+      }
+      .title {
+        margin-left: 0.27rem;
+        h4 {
+          font-size: 0.12rem;
+          color: #000;
+          margin: 0.04rem 0 0.09rem 0;
+          font-weight: 500;
+        }
+        p {
+          font-size: 0.1rem;
+          color: #666;
+          margin-bottom: 0.05rem;
+        }
+        span {
+          @include flexbox();
+          font-size: 0.1rem;
+          color: #EC6A9B;
+          margin-bottom: 0.13rem;
+        }
+      }
+    }
+  }
+}
+.shop-detail {
+  @include rect(100%,100%);
+  overflow: auto;
+  .header {
+    @include rect(100%,0.44rem);
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items();
+    background: #EC6A9B;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    .s1 {
+      width: 0.12rem;
+      height: 0.21rem;
+      background: url('/detail/left1.png')no-repeat;
+      background-size: 0.12rem 0.21rem;
+      margin-left: 0.15rem;
+    }
+    .s2 {
+      width: 0.21rem;
+      height: 0.21rem;
+      background: url('/detail/shop1.png')no-repeat;
+      background-size: 0.21rem 0.21rem;
+      margin-right: 0.15rem;
+    }
+  }
+  .cont {
+    background: #f5f7f9;
+    @include rect(100%,auto);
+    .banner {
+      @include rect(100%,3.43rem);
+      img {
+        @include rect(100%,100%);
+      }
+    }
+    .info {
+      padding: 0 0.12rem;
+      background: #fff;
+      padding-top: 0.13rem;
+      .one {
+        @include flexbox();
+        @include justify-content(space-between); 
+        .s1 {
+          color: #EC6A9B;
+          font-size: 0.16rem;
+        }
+        .s2 {
+          vertical-align: baseline;
+          color: #999;
+          font-size: 0.14rem;
+        }
+      }
+      .two {
+        color: #333;
+      }
+      .three {
+        @include flexbox();
+        @include justify-content(space-between);
+        margin: 0.1rem 0 0.07rem;;
+        .left{
+          .price {
+            color: #EC6A9B;
+            font-size: .16rem;
+          }
+          .man {
+            color: #666;
+            font-size: 0.12rem;
+            margin-left: 0.11rem;
+          }
+        }
+        .right {
+          @include flexbox();
+          @include align-items();
+          .wuxing {
+            @include flexbox();
+            width: 0.13rem;
+            height: 0.12rem;
+            background: url('/detail/wuxing1.png')no-repeat;
+            background-size: 0.13rem 0.12rem;
+          }
+          .dianxin {
+            @include flexbox();
+            width: 0.13rem;
+            height: 0.12rem;
+            background: url('/detail/zanhou.png')no-repeat;
+            background-size: 0.13rem 0.12rem;
+          }
+          .zan {
+            margin: 0 0.17rem 0 0.07rem;
+          }
+          .xin {
+            margin-left: 0.07rem;
+          }
+        }
+      }
+    }
+    .shop-info {
+      margin: 0.1rem 0 0.06rem;
+      background: #fff;
+      padding: 0.11rem 0 0.47rem 0.12rem;
+      h4 {
+        font-size: 0.18rem;
+        color: #333;
+        margin-bottom: 0.24rem;
+      }
+      p {
+        width: 3.05rem;
+        font-size: 0.12rem;
+        color: #666;
+        text-indent: 0.12rem;
+        
+      }
+    }
+    .fahuo {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items();
+      height: 0.43rem;
+      padding: 0 0.12rem;
+      background: #fff;
+      color: #666;
+      margin-bottom: 0.06rem;
+      p {
+        font-size: 0.12rem;
+        @include flexbox();
+        i {
+          @include flexbox();
+          width: 0.13rem;
+          height: 0.17rem;
+          background: url('/detail/map1.png')no-repeat;
+          background-size: 0.13rem 0.17rem;
+          margin-right: 0.04rem;
+        }
+        span {
+          color: #333;
+        }
+      }
+      .xiaoliang {
+      }
+    }
+    .choice {
+      background: #fff;
+      padding: 0.13rem 0.12rem 0.13rem;
+      margin-bottom: 0.06rem;
+      .one {
+        @include flexbox();
+        @include align-items();
+        @include justify-content(space-between);
+        color: #666;
+        margin-bottom: 0.17rem;
+        .s1 {
+        }
+        .jiantou {
+          width: 0.06rem;
+          height: 0.12rem;
+          background: url('/detail/youhei.png')no-repeat;
+          background-size: 0.06rem 0.12rem;
+        }
+      }
+      .two {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        margin-bottom: 0.13rem;
+        .img {
+          @include flexbox();
+          @include justify-content();
+          img {
+            width: 0.41rem;
+            height: 0.39rem;
+            margin-right: 0.09rem;
+          }
+        }
+        span {
+          @include flexbox();
+          @include align-items();
+          @include justify-content();
+          background: #eee;
+          color: #999;
+          width: 0.72rem;
+          height: 0.22rem;
+          border-radius: 0.12rem;
+          font-size: 0.1rem;
+        }
+      }
+      .three {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        color: #333;
+        .s1 {
+        }
+        .s2 {
+          width: 0.06rem;
+          height: 0.12rem;
+          background: url('/detail/youhei.png')no-repeat;
+          background-size: 0.06rem 0.12rem;
+        }
+      }
+    }
+    .evaluate {
+      background: #fff;
+      padding: 0.13rem 0.12rem 0.13rem;
+      margin-bottom: 0.2rem;
+      .one {
+        @include flexbox();
+        @include justify-content(space-between);
+        .s {
+          color: #999;
+          @include flexbox();
+          .s1 {
+            color: #000;
+            @include flexbox();
+            @include align-items();
+            i {
+              @include flexbox();
+              width: 0.13rem;
+              height: 0.13rem;
+              background: url('/detail/lianxi.png')no-repeat;
+              background-size: 0.13rem 0.13rem;
+              margin-left: 0.05rem;
+            }
+          }
+          .s2 {
+            margin-left: 0.07rem;
+          }
+        }
+        .s3 {
+          color: #EC6A9B;
+          @include flexbox();
+          @include align-items();
+          font-size: 0.1rem;
+          i {
+            @include flexbox();
+            width: 0.06rem;
+            height: 0.12rem;
+            background: url('/detail/youfen.png')no-repeat;
+            background-size: 0.06rem 0.12rem;
+            margin-left: 0.05rem;
+          }
+        }
+      }
+      .two {
+        @include flexbox();
+        @include align-items();
+        margin: 0.09rem 0 0.13rem;;
+        img {
+          @include rect(0.33rem,0.33rem);
+          margin-right: 0.05rem;
+        }
+      }
+      .three{
+        color: #999;
+      }
+    }
+    .cai {
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      font-size: 0.16rem;
+      margin-bottom: 0.11rem;
+      color: #EC6A9B;
+      span {
+        margin: 0 0.1rem;
+      }
+      img {
+        width: 0.18rem;
+        height: 0.04rem;
+      }
+    }
+    .love {
+      margin-bottom: 0.6rem;
+      ul {
+        @include flexbox();
+        margin: 0 0.05rem;
+        li {
+          margin: 0 0.05rem;
+          background: #fff;
+          font-size: 0.1rem;
+          width: 1.1rem;
+          .img {
+            @include flexbox();
+            @include rect(100%,1.05rem);
+            @include align-items();
+            @include justify-content();
+            img {
+              @include rect(0.59rem,0.82rem);
+            }
+          }
+          .title {
+            padding: 0.14rem;
+            h4 {
+              color: #333;
+              margin-bottom: 0.06rem;
+            }
+            p {
+              margin-bottom: 0.06rem;
+              color: #666;
+            }
+            span {
+              color: #EC6A9B;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    @include rect(100%,0.5rem);
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items();
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    ul {
+      @include flexbox();
+      @include justify-content(space-around);
+      li {
+        width: 0.24rem;
+        font-size: 0.12rem;
+        @include flexbox();
+        @include justify-content();
+        @include flex-direction(column);
+        margin: 0 0.17rem;
+        img {
+          width: 0.18rem;
+          height: 0.18rem;
+          margin-bottom: 0.06rem;
+        }
+        .s2 {
+          width: 0.22rem;
+        }
+      }
+    }
+    .add {
+      font-size: 0.12rem;
+      background: #EC6A9B;
+      border-radius: 0.12rem;
+      color: #fff;
+      width: 1.74rem;
+      height: 0.28rem;
+      @include flexbox();
+      span {
+        height: 100%;
+        width: 0.87rem;
+        @include align-items();
+        @include flexbox();
+        @include justify-content();
+      }
+      .te {
+        border-right: 0.01rem solid #fff;
+
       }
     }
   }

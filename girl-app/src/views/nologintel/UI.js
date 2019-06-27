@@ -42,7 +42,7 @@ class Com extends Component {
                   <span className='s3'></span>
                 </div>
               </div>
-              <div className='xieyi'>登陆注册代表统一<i>用户协议</i>和<i>隐私政策</i></div>
+              <div className='xieyi'>登陆注册代表同意<i>用户协议</i>和<i>隐私政策</i></div>
             </div>
           </div>
         </section>

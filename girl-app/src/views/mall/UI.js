@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Search from '@/components/shop/Search1';
 import { Tabs } from 'antd-mobile';
 import Shoplist from '@/components/shop/Shoplist';
+import Shoplist1 from '@/components/shop/Shoplist1';
+import Shoplist2 from '@/components/shop/Shoplist2';
 
 class Com extends Component {
   constructor (props) {
@@ -27,8 +29,16 @@ class Com extends Component {
     // </div>
     // )
     let ta = <div>还没有数据</div>
-    this.state.activeIndex === 0 ? ta = <Shoplist bannerlist = { this.props.bannerlist } { ...this.props } shoplist = { this.props.shoplist } /> : ta = <div></div>;
-    // this.state.activeIndex === 1 ? ta = <Shoplist list = { this.props.bannerlist } { ...this.props } /> : ta = <div></div>;
+    if (this.state.activeIndex === 0) {
+      ta = <Shoplist bannerlist = { this.props.bannerlist } { ...this.props } shoplist = { this.props.shoplist } />
+    } else if (this.state.activeIndex === 1) {
+      ta = <Shoplist1 />
+    } else {
+      ta = <Shoplist2 />
+    }
+    // this.state.activeIndex === 0 ? ta = <Shoplist bannerlist = { this.props.bannerlist } { ...this.props } shoplist = { this.props.shoplist } /> : ta = <div></div>;
+    // this.state.activeIndex === 1 ? ta = <Shoplist1 /> : ta = <div></div>;
+    // this.state.activeIndex === 2 ? ta = <Shoplist2 /> : ta = <div></div>;
     return ta
   }
   

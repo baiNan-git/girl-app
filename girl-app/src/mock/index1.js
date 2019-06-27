@@ -1,15 +1,25 @@
 const Mock = require('mockjs');
 
 function getBannerFn () {
-  let arr =[];
-  for(let i = 0;i < 10;i++) {
-    arr.push({
-      id: 'banner' + i,
-      imgSrc:Mock.Random.image('375x180',Mock.mock('@color()')),
-      alt: '',
-      href: ''
-    })
-  }
+  let arr =[
+    {
+      imgSrc: '/shopimg/banner.png'
+    },
+    {
+      imgSrc: '/shopimg/banner1.png'
+    },
+    {
+      imgSrc: '/shopimg/banner2.png'
+    },
+  ];
+  // for(let i = 0;i < 10;i++) {
+  //   arr.push({
+  //     id: 'banner' + i,
+  //     imgSrc:Mock.Random.image('375x180',Mock.mock('@color()')),
+  //     alt: '',
+  //     href: ''
+  //   })
+  // }
   return arr;
 }
 

@@ -15,27 +15,27 @@ class Com extends React.Component {
     this.props.history.push('/detail')
   }
   render() {
-    
+    console.log(this.props.bannerlist)
     return (
-      <div>
+      <div className='tuijian'>
         <Carousel
           autoplay
           infinite
           style={{ display: 'block', width: '100%', height: 176 }}
         >
-          {/* {this.props.bannerlist.map((item, index) => (  */}
+          {this.props.bannerlist.map((item, index) => ( 
             <a
-              // key={index}
+              key={index}
               href="http://www.alipay.com"
               style={{ display: 'block', width: '100%', height: '100%' }}
             >
               <img
-                src='/shopimg/banner.png'
+                src={item.imgSrc}
                 alt=""
                 style={{ width: '100%', verticalAlign: 'top', height: '100%' }}
               />
             </a>
-          {/* ))} */}
+           ))} 
         </Carousel>
         <Hot1 />
         <Hot2 />
