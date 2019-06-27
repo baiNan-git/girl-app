@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Com = () => (
+const Com = ({gopink}) => (
   <div className = 'hot-3'>
     <ul>
       <li>
@@ -10,7 +10,7 @@ const Com = () => (
         <img src='/shopimg/hot3-2.png' alt='' />
       </li>
       <li>
-        <img src='/shopimg/hot3-3.png' alt='' />
+        <img src='/shopimg/hot3-3.png' alt='' onClick={gopink} />
       </li>
     </ul>
   </div>

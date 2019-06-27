@@ -1176,3 +1176,111 @@ html, body, #root, .container {
   }
 }
 
+.smallpink {
+  height: 100%;
+  overflow: auto;
+  padding-top: 0.44rem;
+  .header {
+    @include flexbox();
+    @include align-items();
+    @include justify-content(space-between);
+    padding: 0 0.12rem;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    .s1 {
+      background: url('/smallpink/pinkleft.png')no-repeat;
+      background-size: 0.11rem 0.2rem;
+      width: 0.11rem;
+      height: 0.2rem;
+    }
+    .s2 {
+      font-size: 0.18rem;
+      color: #fff;
+    }
+    .s3 {
+      background: url('/smallpink/pinkmore.png')no-repeat;
+      background-size: 0.04rem 0.18rem;
+      width: 0.04rem;
+      height: 0.18rem;
+    }
+  }
+  .cont {
+    width: 100%;
+    padding: 0.1rem 0.12rem 0;
+    .img1 {
+      width: 3.55rem;
+      height: 2rem;
+      position: relative;
+      img {
+        width: 3.55rem;
+        height: 2rem;
+      }
+      .le {
+        position: absolute;
+        left: 0.2rem;
+        bottom: 0.05rem;
+        width: 0.26rem;
+        height: 0.26rem;
+      }
+    }
+    .bao {
+      margin-bottom: 0.1rem;
+      .dian1 {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        height: 0.57rem;
+        margin-bottom: 0.07rem;
+        .left {
+          @include flexbox();
+          img {
+            width: 0.43rem;
+            height: 0.43rem;
+          }
+          .left-r {
+            margin-left: 0.06rem;
+            span {
+              font-size: 0.12rem;
+              color: #333;
+            }
+            p {
+              font-size: 0.1rem;
+              color: #666;
+            }
+          }
+        }
+        .right {
+          img {
+            width: 0.34rem;
+            height: 0.34rem;
+          }
+        }
+      }
+      .img2 {
+        @include flexbox();
+        @include rect(3.55rem,1.45rem);
+        .left {
+          img {
+            width: 1.76rem;
+            height: 1.37rem;
+          }
+        }
+        .right {
+          width: 1.56rem;
+          height: 1.37rem;
+          margin-left: 0.13rem;
+          .top {
+            margin-bottom: 0.05rem;
+            height: 0.66rem;
+          }
+          img {
+            float: left;
+            width: 0.78rem;
+            height: 0.66rem;
+          }
+        }
+      }
+    }
+  }
+}

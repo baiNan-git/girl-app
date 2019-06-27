@@ -11,8 +11,11 @@ class Com extends React.Component {
     console.log(this.props)
   }
   goDetail () {
-    console.log(this.props)
+    // console.log(this.props)
     this.props.history.push('/detail')
+  }
+  gopink () {
+    this.props.history.push('/smallpink')
   }
   render() {
     console.log(this.props.bannerlist)
@@ -39,7 +42,7 @@ class Com extends React.Component {
         </Carousel>
         <Hot1 />
         <Hot2 />
-        <Hot3 />
+        <Hot3 gopink={ this.gopink.bind(this) }/>
         <ul className = 'shop-prolist'>
           {
             this.props.shoplist.map((item, index) => {
