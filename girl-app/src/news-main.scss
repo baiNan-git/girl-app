@@ -54,7 +54,13 @@ html, body, #root, .container {
 .am-drawer.am-drawer-left .am-drawer-draghandle, .am-drawer.am-drawer-right .am-drawer-draghandle {
   width: 0px;
 }
-
+.am-navbar-title {
+  flex:none;
+  margin-left: 110px;
+}
+.am-navbar-left {
+  flex:0;
+}
 .my-drawer {
   position: relative;
   overflow: auto;
