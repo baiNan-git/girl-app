@@ -183,11 +183,72 @@ html, body, #root, .container {
   } 
 }
 
+.home-xq {
+  padding-bottom: .5rem;
+ @include flexbox();
+ .home-header { 
+   @include rect(100%, .44rem);
+   background-color: #333333
 
+ }
 
+}
+//   .home-xq {
+//     padding-bottom: .5rem;
+//   .home-header {
+//     margin-top: .1rem;
+//     @include rect(100%,0.44rem);
+//     background-color:(#FFFFFF);
+//     overflow: hidden;
+//     text-align: center;
+//     line-height: .44rem;
+//     border-bottom: .1rem solid #999999;
+//     .header-l {
+//       float: left;
+//       .img-l {
+//         width: .35rem;
+//         height: .35rem;
+//         margin:0 .08rem;
+//       }
+//       span {
+//         font-size: .15rem;
+//         color: #333333;
+//       }
+//     }
+//     .header-r {
+//       float: right;
+//       span {
+//         background-color: #ec6b9b;
+//         color: #FFFFFF;
+//         font-size: .12rem;
+//         width: .14rem;
+//         height: .17rem;
+//         border-radius: .06rem;
+//       }
+//       .img-r {
+//         width: .14rem;
+//         height: .14rem;
+//         margin:0 .08rem;
+//       }  
+//     }
+//   } 
+//   .home-main {
+//     marign-top: .5rem;
+//     .title_img {
+
+//     }
+//     span {
+//       width: 2.37rem;
+//       height: .14rem;
+//       font-size: .14rem;
+//       color: #333333;
+//     }
+//     p {
+
+//     }
+// }
+// }
     }
-
-
   .footer {
     @include rect(100%,0.5rem);
     background: #FFFFFF;
