@@ -8,6 +8,8 @@ import Guan from '@/views/news/guanzhu';
 import Shou from '@/views/news/shouchang';
 import Cao from '@/views/news/caogao';
 import Juan from '@/views/news/pink';
+import Dan from '@/views/news/dingdan';
+import Bang from '@/views/news/bangzhu';
 import She from '@/views/infodata';
 import { Switch, Route, NavLink, Redirect} from 'react-router-dom';
 
@@ -23,6 +25,8 @@ const App = () => (
       <Route path = "/shou" component = { Shou } />
       <Route path = "/cao" component = { Cao } />
       <Route path = "/juan" component = { Juan } />
+      <Route path = "/dan" component = { Dan } />
+      <Route path = "/bang" component = { Bang } />
       <Route path = "/she" component = { She } />
       <Redirect to = '/home'/>
     </Switch>

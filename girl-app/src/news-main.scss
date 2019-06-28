@@ -363,3 +363,14 @@ html, body, #root, .container {
     }
    }
 }
+
+.bangzhu {
+  background: url('./views/news/news-img/dabeijing.png') no-repeat center center fixed;
+  width: 375px;
+  height: 700px;
+  background-size: 375px 647px;
+
+  .qwe {
+    padding-top:200px;
+  }  
+}

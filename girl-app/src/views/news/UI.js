@@ -35,7 +35,7 @@ class Com extends Component {
       </ul>
       <ul className= 'lei'>
         <NavLink to ='/guan'><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
-        <NavLink to ='/guan'><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
+        <NavLink to ='/dan'><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
         <NavLink to ='/juan'><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
         <NavLink to ='/guan'><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
         <NavLink to ='/guan'><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
@@ -43,7 +43,7 @@ class Com extends Component {
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <NavLink to ='/guan'><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
+        <NavLink to ='/bang'><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
         <NavLink to ='/she'><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</NavLink>
       </ul>
 
