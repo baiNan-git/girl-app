@@ -328,3 +328,38 @@ html, body, #root, .container {
     }
   }
 }
+
+.caogao {
+  li {
+    @include align-items();
+    @include flexbox(column);
+    background: #fff;
+    margin-bottom: 14px;
+    height:125px;
+    img {
+      width: 112px;
+      height:103px;
+      margin-left: 6px;
+    }
+    div {
+      line-height: 4;
+      margin-left: 22px;
+      margin-top: 28px;
+      h3 {
+        font-size:14px;
+        font-family:MicrosoftYaHei;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:22px;
+      }
+      span {
+        margin-top:20px; 
+        font-size:12px;
+        font-family:MicrosoftYaHei;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        line-height:22px;
+      }
+    }
+   }
+}
