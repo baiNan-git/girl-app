@@ -6,6 +6,9 @@ class Com extends Component {
   goback () {
     this.props.history.push('/mall')
   }
+  goshopdetail () {
+    this.props.history.push('/detail/shopdetail')
+  }
   render () {
     return (
       <div className='box'>
@@ -29,7 +32,7 @@ class Com extends Component {
                     <p>好评100%</p>
                   </div>
                 </div>
-                <div className='right'>
+                <div className='right' onClick={ this.goshopdetail.bind(this) }>
                   <img src='/smallpink/pinkjin.png' alt=''/>
                 </div>
               </div>

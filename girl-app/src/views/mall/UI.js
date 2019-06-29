@@ -50,11 +50,14 @@ class Com extends Component {
     })
     // console.log(activeIndex)
   }
+  goSearch () {
+    this.props.history.push('/detail/search')
+  }
   render () {
     return(
       <div className = 'box'>
         <div className = 'shop-content'>
-          <Search />
+          <Search goSearch={ this.goSearch.bind(this) }/>
           <div className = 'content-z'>
             <Tabs tabs={this.state.tabs} 
             onClick = { this.TabClick.bind(this) }

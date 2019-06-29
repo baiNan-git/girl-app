@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Com = () => (
-  <div className = 'shop-search'>
+const Com = ({ goSearch }) => (
+  <div className = 'shop-search' onClick={goSearch}>
     <img src='/shopimg/head.png' alt='' />
     <div className = 'search'>
       <span></span>
