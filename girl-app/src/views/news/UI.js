@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Drawer, List, NavBar } from 'antd-mobile';
+import { Drawer, List, NavBar} from 'antd-mobile';
 import {  NavLink } from 'react-router-dom';
 // class Com extends Component {
 //   render () {
@@ -31,19 +31,19 @@ class Com extends Component {
         }}>更多</h3>
         <NavLink to ='/guan'><img src={require('@/views/news/news-img/yan.png')} alt="" style={{paddingRight:0}}/> 我的关注</NavLink>
         <NavLink to ='/shou'><img src={require('@/views/news/news-img/aixin.png')} alt="" />我的收藏</NavLink>
-        <NavLink to =''><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</NavLink>
+        <NavLink to ='/cao'><img src={require('@/views/news/news-img/wenjianjia.png')} alt="" />我的草稿</NavLink>
       </ul>
       <ul className= 'lei'>
-        <NavLink to ='/an'><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
-        <NavLink to =''><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
-        <NavLink to =''><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
-        <NavLink to =''><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
-        <NavLink to =''><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
+        <NavLink to ='/guan'><img src={require('@/views/news/news-img/gouwuche.png')} alt="" />购物车</NavLink>
+        <NavLink to ='/dan'><img src={require('@/views/news/news-img/shuye.png')} alt="" />订单</NavLink>
+        <NavLink to ='/juan'><img src={require('@/views/news/news-img/qian.png')} alt="" />PlN卷</NavLink>
+        <NavLink to ='/guan'><img src={require('@/views/news/news-img/aixin.png')} alt="" />心愿单</NavLink>
+        <NavLink to ='/guan'><img src={require('@/views/news/news-img/vip.png')} alt="" />pin会员卡</NavLink>
       </ul>
       <ul className= 'lei' style={{
         borderBottom:0,
       }}>
-        <NavLink to =''><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
+        <NavLink to ='/bang'><img src={require('@/views/news/news-img/erji.png')} alt="" />帮助与客服</NavLink>
         <NavLink to ='/she'><img src={require('@/views/news/news-img/wenhao.png')} alt="" />设置</NavLink>
       </ul>
 
@@ -66,7 +66,8 @@ class Com extends Component {
         onOpenChange={this.onOpenChange}
       >
         <div className='box-left'>
-        <NavBar className="iconfont icon-caidan" onLeftClick={this.onOpenChange}>消息</NavBar>
+
+        <NavBar icon={<span className='iconfont icon-caidan'/>} onLeftClick={this.onOpenChange}>消息</NavBar>
           <ul className = 'xiao'>
             <li>
                 <img src={require('@/views/news/news-img/p1.png')} alt="" />
@@ -92,8 +93,8 @@ class Com extends Component {
             <li>
               <img src={require('@/views/news/news-img/tou.png')} alt="" />
               <div>
-                <h3>通知消息</h3>
-                <span>新功能上线，请查收</span>
+                <h3>私信</h3>
+                <span>附近人打个招呼？</span>
               </div>
             </li>
           </ul>
