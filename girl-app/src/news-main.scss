@@ -82,7 +82,7 @@ html, body, #root, .container {
    background: #fff;
    @include rect(100%,100%);
    @include flexbox();
-   width: 360px;
+   
    margin:10px 8px 10px 8px;
    li {
     float: left;
@@ -106,7 +106,6 @@ html, body, #root, .container {
    }
  }
  .xiao2 {
-  width: 360px;
   margin:0px 8px 10px 8px;
    li {
     @include align-items();
