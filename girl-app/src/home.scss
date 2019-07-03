@@ -246,31 +246,4 @@ html, body, #root, .container {
 // }
 // }
     }
-  .footer {
-    @include rect(100%,0.5rem);
-    background: #FFFFFF;
-    ul {
-      @include rect(100%,100%);
-      @include flexbox();
-      a {
-        @include flex();
-        @include flexbox();
-        @include rect(auto,100%);
-        @include flex-direction(column);
-        @include justify-content();
-        @include align-items();
-        color: #999999;
-        span {
-          font-size: 0.15rem;
-        }
-        p {
-          font-size: 0.15rem;
-        }
-        &.active {
-          font-size: 0.17rem;
-          color: #333333;
-        }
-      }
-    }
-  }
 }

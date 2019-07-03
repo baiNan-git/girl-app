@@ -6,7 +6,7 @@ class Com extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      login: true
+      login: false
     }
   }
   gotel () {
@@ -18,13 +18,21 @@ class Com extends Component {
   goInfodata () {
     this.props.history.push('/detail/infodata')
   }
+  componentDidMount () {
+    console.log(localStorage)
+    if (sessionStorage.islogin ==='ok') {
+      this.setState({
+        login: true
+      })
+    } 
+  }
   render () {
     return(
       <div className = 'box'>
         <section className = 'content'>
           {
-            this.state.login === true ? <Login goInfodata = { this.goInfodata.bind(this) }/>
-            : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) } />
+            this.state.login === true ? <Login goInfodata = { this.goInfodata.bind(this) } {...this.props}/>
+            : <Nologinpass gotel={ this.gotel.bind(this) } gohome={ this.gohome.bind(this) } {...this.props} />
           }
         </section>
       </div>

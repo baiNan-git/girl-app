@@ -8,6 +8,7 @@ html, body, #root, .container {
   @include flexbox();
   @include flex-direction(column);
   .box {
+    overflow-y: scroll;
     @include flexbox();
     @include flex();
     @include rect(100%,100%);
@@ -15,7 +16,7 @@ html, body, #root, .container {
     .shop-content {
       @include flex();  
       @include rect(100%,auto);
-      overflow: auto;
+      overflow-y: scroll;
     }
   }
   .footer {
@@ -34,11 +35,10 @@ html, body, #root, .container {
         @include justify-content();
         @include align-items();
         color: #999;
-        p {
-          font-size: 0.18rem;
-        }
+        font-size: 0.16rem;
         &.active {
           color: #333;
+          font-size: 0.2rem;
         }
       }
     }
@@ -46,9 +46,8 @@ html, body, #root, .container {
 }
 .shop-search {
   @include flexbox();
-  @include rect(100%,0.64rem);
+  @include rect(100%,0.44rem);
   @include align-items();
-  padding-top: 0.2rem;
   background: #EC6A9B;
   position: fixed;
   top: 0;
@@ -78,7 +77,9 @@ html, body, #root, .container {
   }
 }
 .content-z  {
-  margin-top: 0.64rem;
+  // @include overflow(auto);
+  overflow: auto;
+  margin-top: 0.44rem;
   .am-tabs-default-bar-content {
     height: 0.4rem;
     .am-tabs-default-bar-tab {
@@ -180,20 +181,22 @@ html, body, #root, .container {
   }
   .shop-prolist {
     // @include rect(100%,100%);
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
     overflow: hidden;
     margin-bottom: 0.5rem;
     li {
       @include flexbox();
       @include rect(1.64rem,1.89rem);
       @include flex-direction(column);
-      // @include justify-content(center);
-      float: left;
       // height: 1.8rem;
       background: #fff;
-      padding: 0.05rem 0.28rem 0;
+      padding: 0.05rem 0.18rem 0;
       margin: 0 0.1rem 0.1rem 0;
+      border-radius: 0.12rem;
       .img{
-        @include rect(1.1rem,0.95rem);
+        @include rect(1.2rem,1.05rem);
         margin: 0 auto;
         background: #ccc;
         img {
@@ -229,152 +232,7 @@ html, body, #root, .container {
 //   color: #f80;
 // }
 
-.nologin, .nologintel, .nologincode {
-  .back {
-    @include flexbox();
-    @include justify-content(space-between);
-    padding-top: 0.15rem;
-    margin-bottom: 0.3rem;
-    color: #999;
-    font-size: 0.14rem;
-    span {
-      padding: 0.05rem 0.15rem;
-    }
-  }
-  .from {
-    @include flexbox();
-    @include flex-direction(column);
-    @include align-items();
-    color: #666;
-    h4 {
-      font: 400 0.18rem/0.4rem "";
-      margin-bottom: 0.4rem;
-    }
-    .inputcode{
-      margin-top: 1rem;
-    }
-    .codeinput{
-      input {
-        text-align: center;
-      }
-    }
-    .user {
-      @include flexbox();
-      @include align-items();
-      width: 2.95rem;
-      height: 0.39rem;
-      margin: 0 auto;
-      border-radius: 0.2rem;
-      border: 0.01rem solid #DCDCDC;
-      color: #666;
-      margin-bottom: 0.17rem;
-      span {
-        margin: 0 0.2rem 0 0.26rem;
-      }
-      input {
-        @include rect(100%,0.2rem);
-        border: none;
-        background: none;
-      }
-    }
-    .pass {
-      @include flexbox();
-      @include align-items();
-      width: 2.95rem;
-      height: 0.39rem;
-      margin: 0 auto;
-      border-radius: 0.2rem;
-      border: 0.01rem solid #DCDCDC;
-      color: #666;
-      span {
-        // @include flexbox();
-        width: 0.18rem;
-        height: 0.2rem;
-        background: url('/shopimg/pass.png') no-repeat;
-        background-size: 0.14rem 0.2rem;
-        margin: 0 0.33rem 0 0.3rem;
-      }
-      input {
-        @include rect(100%,0.2rem);
-        border: none;
-        background: none;
-      }
-    }
-    button {
-      @include rect(80%,0.4rem);
-      border: none;
-      background: #EC6A9B;
-      margin-bottom: 0.15rem;
-      margin-top: 0.2rem;
-      border-radius: 0.2rem;
-      color: #fff;
-    }
-    .option {
-      @include rect(80%,0.3rem);
-      margin-bottom: 1.5rem;
-      color: #EC6A9B;
-      font-size: 0.12rem;
-      .s1{
-        float: left;
-      }
-      .s2{
-        float: right;
-      }
-    }
-    .link {
-      width: 80%;
-      text-align: center;
-      .qi {
-        @include flexbox();
-        @include align-items();
-        margin-bottom: 0.3rem;
-        .xian {
-          width: 0.87rem;
-          height: 0.01rem;
-          background: #EC6A9B;
-        }
-        h5 {
-          font-size: 0.14rem;
-          font-weight: 500;
-          color: #666;
-          margin: 0 0.15rem;
-        }
-      }
-      .link-c {
-        @include rect(100%,0.4rem);
-        @include flexbox();
-        @include justify-content(space-around);
-        @include align-items();
-        .s1 {
-          background: url('/shopimg/weixin.png') no-repeat;
-          width: 0.3rem;
-          height: 0.25rem;
-          background-size: 0.3rem 0.25rem; 
-        }
-        .s2 {
-          background: url('/shopimg/qq2.png') no-repeat;
-          width: 0.2rem;
-          height: 0.23rem;
-          background-size: 0.2rem 0.23rem; 
-        }
-        .s3 {
-          background: url('/shopimg/weibo.png') no-repeat;
-          width: 0.28rem;
-          height: 0.31rem;
-          background-size: 0.28rem 0.31rem; 
-        }
-      }
-    }
-    .xieyi {
-      font-size: 0.1rem;
-      color: #666;
-      margin-top: 0.2rem;
-      i {
-        color: #EC6A9B;
-      }
-    }
-  }
-}
+
 .content {
   height: 100%;
   overflow: auto;
@@ -590,6 +448,7 @@ html, body, #root, .container {
       width: 1.71rem;
       height: 2.42;
       margin-right: 0.08rem;
+      border-radius: 0.12rem;
       .img {
         @include flexbox();
         @include justify-content();
@@ -683,6 +542,7 @@ html, body, #root, .container {
           .price {
             color: #EC6A9B;
             font-size: .16rem;
+            
           }
           .man {
             color: #666;
@@ -978,7 +838,7 @@ html, body, #root, .container {
   }
   .shop-prolist {
     // @include rect(100%,100%);
-    overflow: hidden;
+    // overflow: auto;
     margin-bottom: 0.5rem;
     li {
       @include flexbox();
@@ -1048,8 +908,17 @@ html, body, #root, .container {
     @include align-items();
     color: #666;
     h4 {
-      font: 400 0.18rem/0.4rem "";
-      margin-bottom: 0.4rem;
+      font: 400 0.18rem/0.3rem "";
+      margin: 0.2rem 0 0.1rem;
+    }
+    .tips {
+      @include flexbox();
+      width: 100%;
+      @include justify-content();
+      margin-bottom: 0.1rem;
+      color: #999;
+      line-height: 0.22rem;
+      height: 0.22rem;
     }
     .inputcode{
       margin-top: 1rem;
@@ -1089,11 +958,11 @@ html, body, #root, .container {
       color: #666;
       span {
         // @include flexbox();
-        width: 0.14rem;
+        width: 0.18rem;
         height: 0.2rem;
         background: url('/shopimg/pass.png') no-repeat;
-        background-size: 0.14rem 0.2rem;
-        margin: 0 0.33rem 0 0.33rem;
+        background-size: 0.15rem 0.2rem;
+        margin: 0 0.28rem 0 0.32rem;
       }
       input {
         @include rect(100%,0.2rem);
@@ -1452,6 +1321,160 @@ html, body, #root, .container {
           padding: 0 0.04rem;
         }
       }
+    }
+  }
+}
+.cart {
+  .header {
+    @include rect(100%,0.44rem);
+    padding: 0 0.15rem;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items();
+    background: #EC6A9B;
+    color: #fff;
+    font-size: 0.18rem;
+    .s1 {
+      background: url('/img/cart/cartback.png')no-repeat;
+      background-size: 0.12rem 0.2rem;
+      width: 0.12rem;
+      height: 0.2rem;
+    }
+    .s2 {
+      background: url('/img/cart/cartdetail.png')no-repeat;
+      background-size: 0.21rem 0.23rem;
+      width: 0.21rem;
+      height: 0.23rem;
+    }
+  }
+  .cont {
+    padding: 0.06rem 0.08rem;
+    background: #f5f7f9;
+    border-radius: 0.12rem;
+    ol {
+      background: #fff;
+      padding: 0.1rem 0.3rem 0.1rem 0.21rem;
+      dt {
+        @include flexbox();
+        width: 100%;
+        p {
+          @include rect(0.24rem,0.24rem);
+          border: 0.01rem solid #999;
+          border-radius: 50%;
+        }
+        img {
+          @include rect(0.18rem,0.19rem);
+          margin: 0 0.04rem 0 0.1rem;;
+        }
+        span {
+          font-size: 0.14rem;
+          color: #333;
+        }
+      }
+      dd {
+        @include flexbox();
+        @include align-items();
+        @include rect(100%,0.87rem);
+        margin: 0.1rem 0;
+        .s1 {
+          @include rect(0.24rem,0.24rem);
+          border: 0.01rem solid #999;
+          border-radius: 50%;
+        }
+        img {
+          @include rect(0.97rem,0.87rem);
+          margin: 0 0.1rem;
+        }
+        .info {
+          p {
+            font-size: 0.16rem;
+            color: #333;
+          }
+          .s2 {
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            background: url('/img/cart/cartju.png')no-repeat;
+            background-size: 0.55rem 0.19rem;
+            width: 0.55rem;
+            height: 0.19rem;
+            color: #666;
+            font-size: 0.1rem;
+            margin: 0.16rem 0 0.1rem;
+          }
+          .ded {
+            @include flexbox();
+            @include justify-content(space-between);
+            
+            .span {
+              color: #EC6A9B;
+            }
+            .right {
+              @include rect(0.77rem,0.24rem);
+              @include flexbox();
+              border: 0.01rem solid #999;
+              button {
+                @include rect(0.2rem,0.24rem);
+                background: none;
+                border: none;
+              }
+              .shuzi {
+                @include flex();
+                @include align-items();
+                text-align: center;
+                border: none;
+                border-left: 0.01rem solid #999;
+                border-right: 0.01rem solid #999;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .total {
+    @include flexbox();
+    @include align-items();
+    @include rect(100%,0.49rem);
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    .checked {
+      @include rect(0.24rem,0.24rem);
+      border: 0.01rem solid #999;
+      border-radius: 50%;
+      margin-left: 0.23rem;
+    }
+    .s{
+      color: #666;
+      margin-left: 0.06rem;
+      font-size: 0.12rem;
+    }
+    .s1 {
+      font-size: 0.1rem;
+      color: #ccc;
+      margin-left: 0.74rem;
+    }
+    .heji {
+      margin-left: 0.07rem;
+      font-size: 0.1rem;
+      color: #666;
+      width: 0.7rem;
+      .price {
+        color: #EC6A9B;
+        width: 0.5rem;
+      }
+    }
+    .jiesuan {
+      @include rect(0.8rem,0.28rem);
+      background: #EC6A9B;
+      border-radius: 0.12rem;
+      color: #fff;
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      margin-left: 0.18rem;
     }
   }
 }

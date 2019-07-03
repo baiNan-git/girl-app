@@ -8,7 +8,12 @@ class Com extends Component {
     this.props.history.push('/')
   }
   getCode () {
-    this.props.history.push('/detail/code')
+    if (!(/^1[3-9]\d{9}$/).test(this.refs.tel.value)) {
+      console.log(document.querySelector('.tips'))
+      document.querySelector(".tips").innerHTML='手机号格式错误'
+    } else {
+      this.props.history.push('/detail/code')
+    }
   }
   render () {
     return(
@@ -21,9 +26,10 @@ class Com extends Component {
             </div>
             <div className = 'from'>
               <h4>手机验证码登陆</h4>
+              <span className='tips'></span>
               <div className = 'user'>
                 <span>+86</span>
-                <input type = 'text' placeholder = '请输入手机号'/>
+                <input type = 'text' placeholder = '请输入手机号' ref='tel'/>
               </div>
               <button onClick={ this.getCode.bind(this) }>获取验证码</button>
               <div className = 'option'>

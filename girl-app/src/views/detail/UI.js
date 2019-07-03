@@ -5,6 +5,10 @@ class Com extends Component {
     console.log(this)
     this.props.history.push('/shop')
   }
+  goCart () {
+    console.log(this)
+    this.props.history.push('/detail/cart')
+  }
   render () {
     return(
       <div className = 'box'>
@@ -12,7 +16,7 @@ class Com extends Component {
           <div className='shop-detail'>
             <div className='header'>
               <span className='s1' onClick={this.goBack.bind(this)}></span>
-              <span className='s2'></span>
+              <span className='s2' onClick={this.goCart.bind(this)}></span>
             </div>
             <div className='cont'>
               <div className='banner'>

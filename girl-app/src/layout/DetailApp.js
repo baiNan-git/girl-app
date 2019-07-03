@@ -7,11 +7,13 @@ import Infodata from '@/views/infodata';
 import Shopdetail from '@/views/shopdetail';
 import Search from '@/views/search';
 import Homedetail from '@/views/homedetail';
+import Cart from '@/views/mall/cart';
 import { Switch, Route} from 'react-router-dom';
 
 
 const Com = () => (
   <Switch>
+    <Route path = '/detail/cart' component = { Cart }/>
     <Route path = '/detail/search' component = { Search }/>
     <Route path = '/detail/shopdetail' component = { Shopdetail }/>
     <Route path = '/detail/homedetail' component = { Homedetail }/>

@@ -11,6 +11,7 @@ class Com extends Component {
         <div className = 'nologincode'>
             <div className = 'from'>
               <h4 className='inputcode'>输入验证码</h4>
+              <span className='tips'></span>
               <div className = 'user codeinput'>
                 <input type = 'text' placeholder = '请输入验证码'/>
               </div>
